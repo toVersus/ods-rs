@@ -1,0 +1,10 @@
+[package]
+name = "ods-rs"
+version = "0.1.0"
+authors = ["toversus <toversus2357@gmail.com>"]
+
+[dependencies]
+
+[[bin]]
+name = "ex1-1-1"
+path = "./ex1/ex1-1-1.rs"
