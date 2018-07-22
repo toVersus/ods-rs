@@ -7,6 +7,8 @@ use std::fs::File;
 use std::io::prelude::*;
 use std::io::{self, BufReader, Read};
 
+static DATAPATH: &'static str = "./data/ex1-1-1-large-input.txt";
+
 fn reverse_lines<R: Read>(r: BufReader<R>) -> String {
     let mut queue: VecDeque<String> = VecDeque::new();
 
@@ -23,7 +25,7 @@ fn reverse_lines<R: Read>(r: BufReader<R>) -> String {
 }
 
 fn main() -> io::Result<()> {
-    let f = File::open("./data/large-input.txt")?;
+    let f = File::open(DATAPATH)?;
     let f = BufReader::new(f);
     print!("{}", reverse_lines(f));
 
@@ -47,7 +49,7 @@ mod tests {
     #[bench]
     fn bench_reverse_lines(b: &mut Bencher) {
         b.iter(|| {
-            let f = File::open("./data/large-input.txt").unwrap();
+            let f = File::open(DATAPATH).unwrap();
             let r = BufReader::new(f);
             reverse_lines(r);
         });
