@@ -8,3 +8,7 @@ authors = ["toversus <toversus2357@gmail.com>"]
 [[bin]]
 name = "ex1-1-1"
 path = "./ex1/ex1-1-1.rs"
+
+[[bin]]
+name = "ex1-1-2"
+path = "./ex1/ex1-1-2.rs"
