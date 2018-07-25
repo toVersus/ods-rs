@@ -4,6 +4,7 @@ version = "0.1.0"
 authors = ["toversus <toversus2357@gmail.com>"]
 
 [dependencies]
+rand = "0.5.4"
 
 [[bin]]
 name = "ex1-1-1"
@@ -36,3 +37,7 @@ path = "./ex1/ex1-1-7.rs"
 [[bin]]
 name = "ex1-1-8"
 path = "./ex1/ex1-1-8.rs"
+
+[[bin]]
+name = "ex1-1-9"
+path = "./ex1/ex1-1-9.rs"
