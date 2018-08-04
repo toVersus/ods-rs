@@ -8,6 +8,7 @@ EX113DATA="${BASEDIR}/ex1-1-3-large-input-with-empty-line.txt"
 EX116DATA="${BASEDIR}/ex1-1-6-large-input-with-random-length-of-lines.txt"
 EX12DATA="${BASEDIR}/ex1-2-dyck-words.txt"
 EX13DATA="${BASEDIR}/ex1-3-is-closed-grouping-statement.txt"
+EX14DATA="${BASEDIR}/ex1-4-sequence-of-numbers.txt"
 
 echo "creating dataset for ex1-1-1, full of random characters..."
 openssl rand -out $EX111DATA -base64 50000000
@@ -26,3 +27,6 @@ printf '+1-1%.0s' {1..100} > $EX12DATA
 
 echo "creating a pair of braces, backets and parenthesises"
 printf '{[()]}%.0s' {1..100} > $EX13DATA
+
+echo "creating a sequence of numbers for ex1-4"
+seq 1 1000 > $EX14DATA
